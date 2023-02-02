@@ -37,38 +37,78 @@ var _hmt = _hmt || [];
     height:150px;
   </style>   
 <p> <a href="https://weixiaogithub.github.io/weixiao.github.io/">我的网页链接</a></p>
-  <ul>
-		<li onclick = "f('sub_menu_1')">一级菜单1
-			<ul id="sub_menu_1">
-				<li>二级餐单1</li>
-				<li>二级餐单1</li>
-				<li>二级餐单1</li>
-				<li>二级餐单1</li>
-			</ul>
-		</li>
-		<li οnclick="f('sub_menu_2')">一级菜单2
-			<ul id="sub_menu_2">
-				<li>二级菜单2</li>
-				<li>二级菜单2</li>
-				<li>二级菜单2</li>
-				<li>二级菜单2</li>
-			</ul>
- 
-		</li>
-		<li>一级餐单3</li>
-	</ul>
-	<script type="text/javascript">
-		function f(str){
-                var sub_menu = document.getElementById(str);
-                var dis_v = sub_menu.style.display;
-                
-                if(dis_v == "block")
-                    sub_menu.style.display = "none";
-                else
-                    sub_menu.style.display = "block";
-                    
+ <h2>可点击的下拉菜单</h2>
+    <p>点击按钮显示下拉菜单</p>
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">下拉菜单</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #3e8e41;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown a:hover {background-color: #f1f1f1}
+        
+        .show {display:block;}
+    </style>
+
+    <script>
+        /* 点击按钮，下拉菜单在 显示/隐藏 之间切换 */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // 点击下拉菜单意外区域隐藏
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+        
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
             }
-		
-	</script>
+          }
+        }
+    </script>
    </body>
 </html>
