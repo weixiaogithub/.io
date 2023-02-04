@@ -24,13 +24,7 @@
     }(),
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
 }
-document.writeln("语言版本: " + browser.language);
-document.writeln(" 是否为移动终端: " + browser.versions.mobile);
-document.writeln(" ios终端: " + browser.versions.ios);
-document.writeln(" android终端: " + browser.versions.android);
-document.writeln(" 是否为iPhone: " + browser.versions.iPhone);
-document.writeln(" 是否iPad: " + browser.versions.iPad);
-document.writeln(navigator.userAgent);
+
 if (browser.versions.android || browser.versions.iPhone || browser.versions.iPad) {
     alert("检测到当前设备为手机\n内容显示可能受影响\n建议使用更大屏幕浏览此网页");
 } else {
