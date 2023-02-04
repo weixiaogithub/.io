@@ -30,7 +30,8 @@ if (browser.versions.android || browser.versions.iPhone || browser.versions.iPad
 } else {
     
 }
-	</script>
+</script>
+
 <script>
 	//获取浏览器页面可见高度和宽度
 var _PageHeight = document.documentElement.clientHeight,
@@ -69,8 +70,44 @@ body {
   background-image:url(12月23日[00-00-00--00-00-30].gif);
 }
 </style>
+	<meta NAME="Generator" CONTENT="EditPlus">
+	<meta NAME="Author" CONTENT="">
+	<meta NAME="Keywords" CONTENT="">
+	<meta NAME="Description" CONTENT="">
+	<script>
+		var x=0,y=0//浮动广告的初始位置
+		var xin =true,yin=true; //xin为真则向右运动，否则向左运动，
+								//yin为真则向下运动，否则向上运动
+		var step=1;//移动的距离
+		var delay=10;//移动的时间间隔
+		function floatAD(){
+			var L=T=0;//L为左边界T为上边界
+			var R=document.body.offsetWidth-document.getElementById("fly").offsetWidth;
+			//层移动到右边界
+			var B=document.body.offsetHeight-document.getElementById("fly").offsetHeight;
+			//层移动到下边界
+			document.getElementById("fly").style.left=x;//层移动后的左边界
+			document.getElementById("fly").style.top=y;//层移动后的上边界
+			x=x+step*(xin?1:-1);//判断水平方向
+			if(x<L){
+				xin=true;x=L
+				}//层到达边界后的处理
+			if(x>R){
+				xin=false;x=R
+				}
+			y=y+step*(yin?1:-1);
+			if(y<T){
+				yin=true;y=T
+				}
+			if(y>B){
+				yin=false;y=B
+				}
+			setTimeout("floatAD()",delay)
+		}
+	</script>
 </head>
 <body>
+<body onload="javascript:window.alert('第一次访问会很慢，请耐心等待')">
 <p>你好，我是李资寒（weixiaogithub）</p>
 <p>这是我的个人主页</p>
  <div><img src="5866e5bf2bf6bffa53130420aa1455a.jpg"></div>
@@ -80,6 +117,10 @@ body {
     height:150px;
   </style>  
 <div>
+	<body onload="floatAD()">
+		<div id="fly" style="position:absolute;left:16px;top:80px;width:265px;height:135px;z-index:1;">
+			<a href="#"><img src="527bc1e412a2eb380a5af84789eb1cd.png" width="264" height="134" border="0"></a>
+		</div>
 <p>电子木鱼（微笑版）</p>
 	<p>敲电子木鱼，见显卡如来，取磁感真经，过二进制苦难，享数字化功德</p>
     <iframe src="Scratch作品.html" width="100%" height="300" frameborder="1">
