@@ -46,10 +46,23 @@ body {
 <link rel="stylesheet" type="text/css" href="back.css">
 </head>
 <body> 
+	<div id="show"></div>
+<script type="text/javascript">
+var str="";
+var len=str.length;
+var i=1;
+function showword(){
+document.getElementById("show").innerHTML=str.substr(0,i);
+i++;
+if(i>len){
+clearInterval("done");
+}
+}
+var done=setInterval("showword()",500);
+</script>
 <p>你好，我是李资寒（weixiaogithub）</p>
 <p>这是我的个人主页</p>
-<p>电子木鱼</p>
-<p>敲电子木鱼，见显卡如来，取磁感真经，过二进制苦难，享数字化功德</p>
+<p>电子木鱼  敲电子木鱼，见显卡如来，取磁感真经，过二进制苦难，享数字化功德</p>
 <div style="width:300px ;height: 300px;">
     <iframe src="https://zeus10241024.gitee.io/dzmy/" width="300" height="300" frameborder="0" noresize=false float:left>嵌入页面来自https://zeus10241024.gitee.io/dzmy/</iframe>
 </div>
@@ -64,6 +77,8 @@ body {
 	<h1>访客请尝试</h1>
 	<h1>滑动到页面底部</h1>
 	<h1>看看是否出现“返回顶部”按钮</h1>
-<p> <a href="https://weixiaogithub.github.io/.io/">我的网页链接</a></p>
+<p> <a href="https://weixiaogithub.github.io/.io/">我的网页链接</a></p><p> <a href="https://weixiaogithub.github.io/.io/hi.html">我的网页链接</a></p>
+	<iframe src="hi.html"></iframe>
+	
    </body>
 </html>
