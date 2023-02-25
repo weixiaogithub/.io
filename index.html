@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dmego Home">
-    <meta name="keywords" content="Dmego,Homepage">
-    <meta name="author" content="Dmego">
-    <title>微笑的个人网页</title>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/iconfont.css">
-    <link rel="apple-touch-icon" href="https://unpkg.com/dmego-home-page@latest/apple-touch-icon.png">
-    <meta name="viewport" content="width=device-width">
+<html lang="en">	
+<head>	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
 <link rel="shortcut icon" href="favicon.ico">
+  <title>微笑</title>
 <script>
 	var browser = {
     versions: function () {
@@ -38,105 +28,43 @@
 }
 
 if (browser.versions.android || browser.versions.iPhone || browser.versions.iPad) {
-    alert("检测到当前设备为手机");
+    alert("检测到当前设备为手机\n内容显示可能受影响\n建议使用更大屏幕浏览此网页");
 	alert('第一次访问会很慢，请耐心等待')
 } else {
-alert("检测到当前设备为电脑")    
+alert("检测到当前设备为电脑\n木鱼的画面可能会很小\n请谅解")    
 alert('第一次访问会很慢，请耐心等待')
 }
 </script>
  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 本站总访问量<span id="busuanzi_value_site_pv"></span>次
-本站访客数<span id="busuanzi_value_site_uv"></span>人次 
+本站访客数<span id="busuanzi_value_site_uv"></span>人次
+<style>
+body {
+  background-image:5866e5bf2bf6bffa53130420aa1455a.png;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="back.css">
 </head>
+<body> 
+	<div id="show"></div>
+<script type="text/javascript">
+var str="";
+var len=str.length;
+var i=1;
+function showword(){
+document.getElementById("show").innerHTML=str.substr(0,i);
+i++;
+if(i>len){
+clearInterval("done");
+}
+}
+var done=setInterval("showword()",500);
+</script>
+<p>你好，我是李资寒（weixiaogithub）<a href="https://weixiaogithub.github.io/.io/hi.html">简介</a></p>
+<p>这是我的个人主页</p>
+<button onclick="topFunction()" id="myBtn" title="回顶部">返回顶部</button>
+<script type="text/javascript" src="back.js"></script>
 
-<body>
-    <span class="mobile btn-mobile-menu">
-        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
-        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
-    </span>
-    <header id="panel" class="panel-cover">
-        <div class="panel-main">
-            <div class="panel-main__inner panel-inverted">
-                <div class="panel-main__content">
-                    <div class="ih-item circle effect right_to_left">            
-                        <a href="#" title="" class="blog-button">
-                            <div class="img"><img src="5866e5bf2bf6bffa53130420aa1455a_爱奇艺.png.jpg" alt="img" class="js-avatar iUp profilepic"></div>
-                            <div class="info iUp">
-                                <div class="info-back">
-                                    <h2> 
-                                        
-                                            微笑
-                                        
-                                    </h2>
-                                    <p>
-                                        
-                                            2023 · 微笑
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <h1 class="panel-cover__title panel-title iUp">
-                        <a href="https://weixiaogithub.github.io/.io/" title="微笑">微笑</a>
-                    </h1>
-                    <p class="panel-cover__subtitle panel-subtitle iUp">Code Create Life</p>
-                    <hr class="panel-cover__divider iUp" />
-                    <p id="description" class="panel-cover__description iUp">如何得与凉风约, 不共尘沙一并来!
-                        <br/>
-                        <strong>-「中牟道中」</strong>
-                    </p>
-                    <div class="navigation-wrapper iUp">
-                        <div>
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="https://weixiaogithub.github.io/.io/" target="_blank class="blog-button">首页</a>
-                                      
-                                    </li>
-                                    
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="iUp">
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/" title="github" target="_blank">
-                                            <i class='social iconfont icon-github'></i>
-                                            <span class="label">github</span>
-                                        </a>
-                                    </li>
-                                 
-
-                                    <li class="navigation__item">
-                                        <a href="https://www.zhihu.com/people/dmego/" title="zhihu" target="_blank">
-                                            <i class='social iconfont icon-zhihu'></i>
-                                            <span class="label">zhihu</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        
-                                        
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-cover--overlay cover-slate"></div>
-        </div>
-        
-    </header>
-    <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
-    <script type="text/javascript" src="./assets/json/images.json?cb=getBingImages"></script>
-										   
-</body>
+<p> <a href="https://weixiaogithub.github.io/.io/">我的网页链接</a></p>
+   </body>
 </html>
-
-
-  
-
