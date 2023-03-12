@@ -36,14 +36,21 @@ alert('第一次访问会很慢，请耐心等待')
 }
 </script>
  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-本站总访问量<span id="busuanzi_value_site_pv"></span>次
-本站访客数<span id="busuanzi_value_site_uv"></span>人次
+
 <style>
 body {
   background-image:;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="back.css">
+</style>
+<style>
+*{margin:0px; padding:0px;} /*这行是为了清除代码默认的样式，不用拷贝*/
+
+.botCenter{width:100%;  line-height:35px; background:#ccc; position:fixed; bottom:0px; left:0px; font-size:14px; color:#000; text-align:center;}
+
+</style>
+	
 </head>
 <body> 
 	<div id="show"></div>
@@ -72,8 +79,11 @@ var done=setInterval("showword()",500);
     <a href="https://weixiaogithub.github.io/.io/">首页</a>
     <a href="https://weixiaogithub.github.io/.io/hi.html" target="_blank">关于</a>
     <a href="https://weixiaogithub.github.io/.io/webs.html" target="_blank">我的收藏</a>
+    <a href="https://weixiaogithub.github.io/.io/photos.html" target="_blank">微笑的图片</a>
   </div>
 </div>
-<p> <a href="https://weixiaogithub.github.io/.io/" target="_blank">我的网页链接</a></p>
+<p> <a href="https://weixiaogithub.github.io/.io/" >我的网页链接</a></p>
+	<div class="botCenter">本站总访问量<span id="busuanzi_value_site_pv"></span>次
+本站访客数<span id="busuanzi_value_site_uv"></span>人次</div>
    </body>
 </html>
