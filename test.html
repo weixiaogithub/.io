@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>联机游戏示例</title>
+    <style>
+        canvas {
+        	border: 1px solid black;
+        	margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        
+        var ws = new WebSocket("ws://localhost:12345/game");
+        
+        ws.onopen = function(event) {
+        	console.log("WebSocket connected.");
+        };
+        
+        ws.onmessage = function(event) {
+        	console.log("Received message:", event.data);
+        	var message = JSON.parse(event.data);
+        	if (message.type === "draw") {
+        		drawRemotePlayer(message.x, message.y);
+        	} else if (message.type === "delete") {
+        		deleteRemotePlayer(message.id);
+        	}
+        };
+        
+        canvas.addEventListener("mousemove", function(event) {
+        	drawLocalPlayer(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+        	ws.send(JSON.stringify({type: "draw", x: event.clientX - canvas.offsetLeft, y: event.clientY - canvas.offsetTop}));
+        });
+        
+        function drawLocalPlayer(x, y) {
+        	ctx.fillStyle = "red";
+        	ctx.beginPath();
+        	ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        	ctx.fill();
+        }
+        
+        function drawRemotePlayer(x, y) {
+        	ctx.fillStyle = "blue";
+        	ctx.beginPath();
+        	ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        	ctx.fill();
+        }
+        
+        function deleteRemotePlayer(id) {
+        	var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        	ctx.clearRect(0, 0, canvas.width, canvas.height);
+        	ctx.putImageData(imageData, 0, 0);
+        }
+    </script>
+
+</body>
+
+</html>
