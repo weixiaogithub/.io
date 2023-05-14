@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="favicon.ico">
     <title>微笑</title>
     <script>
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+var isDesktop = !isMobile;
   if (!document.cookie.match(/visited=true/)) {
   // 如果没有设置cookie，则显示警告框
  if (isMobile) {
@@ -166,9 +168,7 @@ time_is_widget.init({China_z43d:{template:"TIME<br>DATE", time_format:"12hours:m
 							      RVh0ZGF0ZTptb2RpZnkAMjAyMy0wMy0xMlQwNDozMDowOCswMTowMDXhPhIAAAAASUVORK5CYII=" y="0" x="0" stroke="null"></image>
         </g>
     </svg>
-    
         <p class="w">你好,我是李资寒。这是我的个人主页</p>
-        
     </div>
   </center>
     <button onclick="topFunction()" id="myBtn" title="回顶部">返回顶部</button>
@@ -194,6 +194,5 @@ time_is_widget.init({China_z43d:{template:"TIME<br>DATE", time_format:"12hours:m
         </div>
     </footer>
 </body>
-
 </html>
 
