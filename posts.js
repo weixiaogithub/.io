@@ -1,14 +1,14 @@
 function loadRandomIframe() {
   const iframes = [
-    'https://weixiaogithub.github.io/.io/colorful.html',
-    'https://weixiaogithub.github.io/.io/planewar.html',
-    'https://weixiaogithub.github.io/.io/blackhole.html',
-    'https://weixiaogithub.github.io/.io/luopan1.html',
-    'https://weixiaogithub.github.io/.io/luopan2',
-    'https://weixiaogithub.github.io/.io/luopan3',
-    'https://weixiaogithub.github.io/.io/sb-bird',
-    'https://weixiaogithub.github.io/.io/time.html',
-    'https://weixiaogithub.github.io/.io/starmouse.html',
+    'https://weixiaogithub.github.io/.io/web/colorful.html',
+    'https://weixiaogithub.github.io/.io/web/planewar.html',
+    'https://weixiaogithub.github.io/.io/web/blackhole.html',
+    'https://weixiaogithub.github.io/.io/web/luopan1.html',
+    'https://weixiaogithub.github.io/.io/web/luopan2',
+    'https://weixiaogithub.github.io/.io/web/luopan3',
+    'https://weixiaogithub.github.io/.io/web/sb-bird',
+    'https://weixiaogithub.github.io/.io/web/time.html',
+    'https://weixiaogithub.github.io/.io/web/starmouse.html',
     
   ];
 
