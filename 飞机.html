@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>射击游戏</title>
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="480" height="320"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        
+        var player = {
+            x: canvas.width / 2,
+            y: canvas.height - 50,
+            speed: 4,
+            size: 20
+        };
+        
+        var bullets = [];
+        var enemies = [];
+        
+        var score = 0;
+        
+        function drawPlayer() {
+            ctx.fillStyle = "blue";
+            ctx.fillRect(player.x - player.size/2, player.y - player.size/2, player.size, player.size);
+        }
+        
+        function drawBullets() {
+            ctx.fillStyle = "red";
+            for(var i = 0; i < bullets.length; i++) {
+                ctx.fillRect(bullets[i].x - 2, bullets[i].y - 10, 4, 10);
+            }
+        }
+        
+        function drawEnemies() {
+            ctx.fillStyle = "green";
+            for(var i = 0; i < enemies.length; i++) {
+                ctx.fillRect(enemies[i].x - 10, enemies[i].y - 10, 20, 20);
+            }
+        }
+        
+        function updateBullets() {
+            for(var i = 0; i < bullets.length; i++) {
+                bullets[i].y -= 10;
+                if(bullets[i].y < 0) {
+                    bullets.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+        
+        function updateEnemies() {
+            for(var i = 0; i < enemies.length; i++) {
+                enemies[i].y += 3;
+                if(enemies[i].y > canvas.height + 10) {
+                    enemies.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+        
+        function handleCollisions() {
+            for(var i = 0; i < bullets.length; i++) {
+                for(var j = 0; j < enemies.length; j++) {
+                    var dx = bullets[i].x - enemies[j].x;
+                    var dy = bullets[i].y - enemies[j].y;
+                    var dist = Math.sqrt(dx*dx + dy*dy);
+                    if(dist < 15) {
+                        bullets.splice(i, 1);
+                        i--;
+                        enemies.splice(j, 1);
+                        j--;
+                        score += 10;
+                    }
+                }
+            }
+        }
+        
+        function drawScore() {
+            ctx.font = "20px Arial";
+            ctx.fillStyle = "black";
+            ctx.fillText("Score: " + score, 10, 30);
+        }
+        
+        function gameOver() {
+            clearInterval(gameInterval);
+            alert("Game over. Your score is: " + score);
+        }
+        
+        function gameLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+            drawPlayer();
+            drawBullets();
+            drawEnemies();
+        
+            updateBullets();
+            updateEnemies();
+        
+            handleCollisions();
+        
+            drawScore();
+        
+            if(enemies.length == 0) {
+                enemies.push({
+                    x: Math.floor(Math.random() * (canvas.width - 40)) + 20,
+                    y: -20
+                });
+            }
+        
+            for(var i = 0; i < enemies.length; i++) {
+                var dx = player.x - enemies[i].x;
+                var dy = player.y - enemies[i].y;
+                var dist = Math.sqrt(dx*dx + dy*dy);
+                if(dist < player.size/2 + 10) {
+                    gameOver();
+                    return;
+                }
+            }
+        }
+        
+        canvas.addEventListener("mousemove", function(event) {
+            player.x = event.clientX - canvas.offsetLeft;
+            if(player.x < player.size/2) {
+                player.x = player.size/2;
+            }
+            if(player.x > canvas.width - player.size/2) {
+                player.x = canvas.width - player.size/2;
+            }
+        });
+        
+        canvas.addEventListener("click", function(event) {
+            bullets.push({
+                x: player.x,
+                y: player.y - player.size/2
+            });
+        });
+        
+        var gameInterval = setInterval(gameLoop, 20);
+    </script>
+
+</body>
+
+</html>
