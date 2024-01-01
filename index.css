@@ -15,38 +15,10 @@
             margin-bottom: 10px;
         }
         
-        article {
-            background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        
-        article h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        
-        article p {
-            margin-bottom: 20px;
-        }
-        
-        article a {
-            display: inline-block;
-            background-color: #0aa4ff;
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
-        }
-        
-        article a:hover {
-            background-color: #6aa4ff;
-            color: #ffffff;
-        }
-        
         footer {
+            position:absolute;
+            bottom:0px;
+            left:0px
             text-align: center;
             padding: 20px;
             background-color: #74ebd5;
