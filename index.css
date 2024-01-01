@@ -9,15 +9,13 @@
             margin-bottom: 30px;
         }
         footer {
-            position:absolute;
-            bottom:0px;
-            left:0px;
+            margin-top: -50px;
             width:100%;
             text-align: center;
             padding: 20px;
             background-color: #74ebd5;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 10px 10px 0 0;
+            border-radius: 20px 20px 0 0;
         }
         @keyframes slideIn {
   from {
@@ -44,9 +42,10 @@
   animation-fill-mode: both;
   
   h1 {      
-            font-size:50px;
+            font-size:200%;
             display: inline-block;
             margin-left:10px;
+            margin-bottom:-10px;
             color: #ffffff;
         }
         
