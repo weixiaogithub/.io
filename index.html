@@ -28,7 +28,7 @@ var isDesktop = !isMobile;
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//widget.time.is/zh.js"></script>
 <script>
-time_is_widget.init({China_z43d:{template:"TIME<br>DATE", time_format:"12hours:minutes:secondsAMPM", date_format:"year年 monthname daynum dayname"}});
+time_is_widget.init({China_z43d:{template:"TIME<br>DATE", time_format:"12 小时之前:minutes:secondsAMPM", date_format:"year年 monthname daynum dayname"}});
 </script> 
 </head>
 <body>
@@ -41,22 +41,21 @@ time_is_widget.init({China_z43d:{template:"TIME<br>DATE", time_format:"12hours:m
                 <li><a href="https://weixiaogithub.github.io/.io/webs.html" target="_blank">收藏</a></li>
             </ul>
         </navin>
-    </nav>
-    <main>
-        <section>
+    </nav>        
+	
+  <main>
+      
             <h2>微笑的网站</h2>
             <h2>有趣的网页</h2>
 		<div id="random-iframe"></div>
 		 <script src="posts.js" type="text/javascript"></script>
-        </section>
-    </main>
-   <footer>
-        <div style="text-align:center">
-            <a href="https://time.is/China" id="time_is_link" rel="nofollow" style="font-size:26px">中国时间:</a>
-            <span id="China_z43d" style="font-size:20px"></span>
+        
+ </main> 
+  <div style="text-align:center">
+            <a href="https://time.is/China" id="time_is_link" rel="nofollow" style="pointer-events:none;font-size:20px">中国时间:</a>
+            <span id="China_z43d" style="pointer-events:none;font-size:20px"></span>
             <span id="busuanzi_container_site_uv">有<span id="busuanzi_value_site_uv"></span>人看到了微笑</span>
-        </div>
-    </footer>
+  </div>
 </body>
 </html>
 
