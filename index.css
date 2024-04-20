@@ -31,7 +31,7 @@
   top: 0px;
   left: 0;
   width: 100%;
-  background-color: #74ebd5;
+  background-color: #feba07;
   padding: 0px 0px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 20px 20px;
@@ -41,12 +41,13 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
-  h1 {      
+  h1 {     
+            text-shadow: 2px 2px 2px #f9f4dc;
             font-size:200%;
             display: inline-block;
             margin-left:10px;
             margin-bottom:-10px;
-            color: #ffffff;
+            color: #f8d86a; 
         }
         
         navin ul {
@@ -56,6 +57,7 @@
         
         navin li {
             margin-right: 20px;
+            margin-top: 7px;
         }
         
         navin a {
@@ -68,7 +70,7 @@
         }
         
         navin a:hover {
-            background-color: #6aa4ff;
+            background-color:  #fbc82f;
         }
         
 
