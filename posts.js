@@ -4,10 +4,8 @@ function loadRandomIframe() {
     'https://weixiaogithub.github.io/.io/web/planewar.html',
     'https://weixiaogithub.github.io/.io/web/blackhole.html',
     'https://weixiaogithub.github.io/.io/web/luopan1.html',
-    'https://weixiaogithub.github.io/.io/web/luopan2',
     'https://weixiaogithub.github.io/.io/web/luopan3',
     'https://weixiaogithub.github.io/.io/web/sb-bird',
-    'https://weixiaogithub.github.io/.io/web/time.html',
     'https://weixiaogithub.github.io/.io/web/starmouse.html',
     
   ];
