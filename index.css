@@ -1,7 +1,6 @@
     main {
-            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 1px;
             margin-top: 100px; /* Add margin-top to avoid content being hidden under the fixed header */
         }
         
@@ -13,7 +12,7 @@
             width:100%;
             text-align: center;
             padding: 20px;
-            background-color: #74ebd5;
+            background-color: #feba07;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 20px 20px 0 0;
         }
