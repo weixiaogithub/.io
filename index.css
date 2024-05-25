@@ -1,16 +1,17 @@
-    main {
+    * {
+        margin: 0;
+    }
+        main {
             margin: 0 auto;
-            padding: 1px;
-            margin-top: 100px; /* Add margin-top to avoid content being hidden under the fixed header */
+            padding: 0px;
+            margin-top: 124px; /* Add margin-top to avoid content being hidden under the fixed header */
         }
         
         section {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
         footer {
             margin-top: -50px;
-            width:100%;
-            text-align: center;
             padding: 20px;
             background-color: #feba07;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
