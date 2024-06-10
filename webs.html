@@ -154,11 +154,11 @@
         <a href="https://github.com/">GitHub</a>
         <a href="https://c.runoob.com/front-end/61/">HTML/CSS/JS 在线工具 | 菜鸟工具</a>
     </div>
- <button onclick="showInput()">显示输入框</button>
+<button onclick="showInput()">显示输入框</button>
 
 <div id="inputDiv" style="display: none;">
   <input type="number" id="inputNumber" placeholder="请输入数字">
-  <button onclick="checkCookie()">验证</button>
+  <button onclick="checkInput()">验证</button>
 </div>
 
 <div id="hiddenDiv">
@@ -170,13 +170,12 @@
   https://18comic-cool.art/
   https://18comic-cool.fyi/
 </div>
-
 <script>
 function showInput() {
   document.getElementById('inputDiv').style.display = 'block';
 }
 
-function checkCookie() {
+function checkInput() {
   var inputValue = parseInt(document.getElementById('inputNumber').value);
   var storedSeed = parseInt(getCookie('seed'));
 
@@ -185,6 +184,10 @@ function checkCookie() {
   } else {
     alert('输入值与 Cookie 值不相同！');
   }
+}
+
+function setCookie(name, value) {
+  document.cookie = name + "=" + value + ";path=/";
 }
 
 function getCookie(name) {
@@ -201,6 +204,16 @@ function getCookie(name) {
   }
   return null;
 }
+
+// 生成随机数并设置到cookie中
+function generateAndSetRandomNumber() {
+  var randomNumber = Math.floor(Math.random() * 100) + 1; // 生成1到100的随机数
+  setCookie('seed', randomNumber);
+}
+
+generateAndSetRandomNumber(); // 页面加载时生成随机数并设置到cookie中
 </script>
+
+
 </body>
 </html>
