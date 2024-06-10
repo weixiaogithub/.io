@@ -40,6 +40,9 @@
     left: 50%;
     transform: translateX(-50%);
 }
+  #hiddenDiv {
+    display: none;
+  }
     </style>
 </head>
 
@@ -151,6 +154,53 @@
         <a href="https://github.com/">GitHub</a>
         <a href="https://c.runoob.com/front-end/61/">HTML/CSS/JS 在线工具 | 菜鸟工具</a>
     </div>
-</body>
+ <button onclick="showInput()">显示输入框</button>
 
+<div id="inputDiv" style="display: none;">
+  <input type="number" id="inputNumber" placeholder="请输入数字">
+  <button onclick="checkCookie()">验证</button>
+</div>
+
+<div id="hiddenDiv">
+  <!-- 这是隐藏的 div -->
+  https://www.softhouse.com.cn/software/2081.html
+  https://18-comicblade.me/
+  http://18comic-now.net/
+  https://18comic-cool.club/ 
+  https://18comic-cool.art/
+  https://18comic-cool.fyi/
+</div>
+
+<script>
+function showInput() {
+  document.getElementById('inputDiv').style.display = 'block';
+}
+
+function checkCookie() {
+  var inputValue = parseInt(document.getElementById('inputNumber').value);
+  var storedSeed = parseInt(getCookie('seed'));
+
+  if (inputValue === storedSeed) {
+    document.getElementById('hiddenDiv').style.display = 'block';
+  } else {
+    alert('输入值与 Cookie 值不相同！');
+  }
+}
+
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var cookies = document.cookie.split(';');
+  for(var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i];
+    while (cookie.charAt(0) == ' ') {
+      cookie = cookie.substring(1, cookie.length);
+    }
+    if (cookie.indexOf(nameEQ) == 0) {
+      return cookie.substring(nameEQ.length, cookie.length);
+    }
+  }
+  return null;
+}
+</script>
+</body>
 </html>
