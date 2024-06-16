@@ -74,9 +74,9 @@
         navin a:hover {
             background-color:  #fbc82f;
         }
-        
-
  #navbar.visible {
   top: 0;
 }
-
+iframe {
+  frameborder="no";
+}
