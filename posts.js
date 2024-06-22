@@ -14,7 +14,7 @@ function loadRandomIframe() {
   const randomIframeSrc = iframes[randomIndex];
 
   const randomIframeElement = document.getElementById('random-iframe');
-  const iframeHtml = `<iframe src="${randomIframeSrc}" frameborder="0";width="100%";height="500"></iframe>`;
+  const iframeHtml = `<iframe src="${randomIframeSrc}" frameborder="0" width="100%" height="500"></iframe>`;
   randomIframeElement.innerHTML = iframeHtml;
 }
 
