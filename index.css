@@ -77,4 +77,20 @@
  #navbar.visible {
   top: 0;
 }
-
+.inset-box {
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: #f1ca17;
+    border: 1px solid #aaa;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    line-height: 16px;
+    color: #333;
+    border-radius: 20px; /* 添加圆角 */
+  }
+  .half {
+    flex: 1; /* 自适应宽度 */
+    padding: 10px;
+    box-sizing: border-box; /* 包括内边距和边框在内 */
